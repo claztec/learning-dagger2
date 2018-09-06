@@ -10,4 +10,6 @@ fun main(args: Array<String>) {
     coffeeMaker.brew()
 
     Injection.provideCoffeeMaker().brew()
+
+    DaggerCoffeeComponent.builder().build().make().brew()
 }
