@@ -1,0 +1,13 @@
+d Heater
+d Heater$DefaultImpls
+d APump
+d Pump
+d Pump$DefaultImpls
+d Injection
+a org.jetbrains.annotations.NotNull 0
+m 0 Injection provideHeater
+m 0 Injection providePump
+m 0 Injection provideCoffeeMaker
+d MainKt
+d AHeater
+d CoffeeMaker
