@@ -1,13 +1,34 @@
-d Heater
-d Heater$DefaultImpls
-d APump
-d Pump
-d Pump$DefaultImpls
 d Injection
 a org.jetbrains.annotations.NotNull 0
 m 0 Injection provideHeater
 m 0 Injection providePump
 m 0 Injection provideCoffeeMaker
-d MainKt
 d AHeater
+d CoffeeComponent
+a dagger.Component 1
+c 1 CoffeeComponent
+m 0 CoffeeComponent make
+d CoffeeComponent$DefaultImpls
 d CoffeeMaker
+a javax.inject.Inject 2
+f 2 CoffeeMaker heater
+f 0 CoffeeMaker heater
+m 0 CoffeeMaker getHeater
+f 2 CoffeeMaker pump
+f 0 CoffeeMaker pump
+m 0 CoffeeMaker getPump
+m 2 CoffeeMaker <init>
+d MainKt
+d Pump
+d Pump$DefaultImpls
+d CoffeeMakerModule
+a dagger.Module 3
+c 3 CoffeeMakerModule
+a dagger.Provides 4
+m 4 CoffeeMakerModule provideHeater$learning_dagger2_main
+m 0 CoffeeMakerModule provideHeater$learning_dagger2_main
+m 4 CoffeeMakerModule providePump$learning_dagger2_main
+m 0 CoffeeMakerModule providePump$learning_dagger2_main
+d Heater
+d Heater$DefaultImpls
+d APump
