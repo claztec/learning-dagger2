@@ -1,3 +1,4 @@
 .gradle
-.ide
+.idea
 out
+build
